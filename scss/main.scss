@@ -1,0 +1,23 @@
+// Base
+
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/buttons";
+@import "./base/animations";
+
+// Blocks
+
+@import "./blocks/header";
+@import "./blocks/nav";
+@import "./blocks/timer";
+@import "./blocks/category";
+@import "./blocks/about";
+@import "./blocks/singers";
+@import "./blocks/event";
+@import "./blocks/pricing";
+@import "./blocks/sponsors";
+@import "./blocks/testimonial";
+@import "./blocks/gallery";
+@import "./blocks/contacts";
+@import "./blocks/footer";

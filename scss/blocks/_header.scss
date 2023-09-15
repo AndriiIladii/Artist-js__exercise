@@ -1,0 +1,60 @@
+.header {
+  font-family: $font-secondary;
+  min-height: 964px;
+  padding: 45px 0 53px;
+  background: linear-gradient(180deg, #381ddb 0%, rgba(0, 0, 0, 0.2) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+    url("./../assets/header/header-bg.jpg");
+
+  @media screen and (max-width: $breakpoint__m) {
+    min-height: 910px;
+  }
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 137px;
+}
+
+.header__content {
+  text-align: center;
+  margin-bottom: 122px;
+}
+
+.header__title {
+  font-size: 72px;
+  color: $color-white;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    font-size: 68px;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    font-size: 55px;
+  }
+}
+
+.header__text {
+  color: $color-white;
+  font-size: 24px;
+  font-family: $font-main;
+  font-weight: 400;
+  line-height: 38px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    font-size: 22px;
+    line-height: 34px;
+  }
+  @media screen and (max-width: $breakpoint__l) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: $breakpoint__m) {
+    font-size: 18px;
+  }
+}

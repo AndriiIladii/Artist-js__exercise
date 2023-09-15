@@ -1,0 +1,169 @@
+.category {
+  padding: 240px 0;
+
+  @media screen and (max-width: $breakpoint__m) {
+    padding: 100px 0 180px;
+  }
+}
+
+.category__items {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.category__item {
+  padding: 90px 120px 36px 60px;
+  width: 370px;
+  height: 326px;
+  border-radius: 24px;
+  transition: all 0.2s ease-in;
+  color: $color-dark;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    padding: 30px 80px 25px 40px;
+    width: 270px;
+    height: 285px;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    padding: 22px 75px 22px 30px;
+    width: 190px;
+    height: 220px;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    padding: 10px 62px 22px 19px;
+    width: 150px;
+    height: 214px;
+  }
+}
+
+.category__item:hover {
+  background-color: $color-blue;
+  color: $color-white;
+}
+
+.category__item:hover path {
+  fill: $color-white;
+}
+
+// Category Items backgrounds
+
+.pop {
+  background-color: rgba($color-pink, 0.1);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    z-index: -1;
+    left: 100px;
+    background-image: url(./../assets/category/Confetti-2.png);
+    width: 102px;
+    height: 102px;
+    animation: swirlForward 3s ease 0s normal forwards;
+    @media screen and (max-width: $breakpoint__l) {
+      top: -120px;
+      left: 350px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 140px;
+    background-image: url(./../assets/category/Frame-1.png);
+    width: 161px;
+    height: 113px;
+    animation: swirlForward 3s ease 0s normal forwards;
+    @media screen and (max-width: $breakpoint__l) {
+      bottom: -120px;
+    }
+  }
+}
+
+.folk {
+  background-color: rgba($color-red, 0.1);
+}
+
+.instrumental {
+  background-color: rgba($light-blue, 0.1);
+}
+
+.rock {
+  background-color: rgba($purple, 0.1);
+}
+
+.jazz {
+  background-color: rgba($light-blue, 0.1);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 170px;
+    background-image: url(./../assets/category/Confetti.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 25px;
+    animation: swirl 4s ease 0s normal forwards;
+    @media screen and (max-width: $breakpoint__l) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 70px;
+    background-image: url(./../assets/category/Confetti-1.png);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 26px;
+    animation: confetti 4s 0s normal forwards;
+    @media screen and (max-width: $breakpoint__l) {
+      display: none;
+    }
+  }
+}
+
+// Category Items backgrounds
+
+.category__title {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 38px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  @media screen and (max-width: $breakpoint__xl) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: $breakpoint__l) {
+    font-size: 15px;
+  }
+}
+
+.category__text {
+  width: 190px;
+  max-width: 190px;
+  opacity: 0.7;
+
+  @media screen and (max-width: $breakpoint__l) {
+    font-size: 11px;
+    width: 140px;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    width: 96px;
+  }
+}

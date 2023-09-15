@@ -1,0 +1,65 @@
+.sponsors {
+  text-align: center;
+  padding-bottom: 240px;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint__m) {
+    padding-bottom: 120px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    background-image: url("./../assets/sponsors/Pattern.svg");
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 173px;
+    content: "";
+    @media screen and (max-width: $breakpoint__xl) {
+      display: none;
+    }
+    @media screen and (max-width: $breakpoint__l) {
+      display: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    right: 75px;
+    top: 100px;
+    background-image: url("./../assets/sponsors/Confetti.svg");
+    background-repeat: no-repeat;
+    width: 107px;
+    height: 130px;
+    content: "";
+    animation: linerDrop 1s ease 0s 1 normal forwards;
+    @media screen and (max-width: $breakpoint__xl) {
+      display: none;
+    }
+
+    @media screen and (max-width: $breakpoint__l) {
+      display: none;
+    }
+  }
+}
+
+.sponsors__items {
+  margin-top: 70px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 130px;
+  row-gap: 60px;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $breakpoint__l) {
+    column-gap: 40px;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    column-gap: 115px;
+    justify-content: center;
+  }
+}

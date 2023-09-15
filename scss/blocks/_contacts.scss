@@ -1,0 +1,190 @@
+.contacts__wrapper {
+  display: flex;
+
+  @media screen and (max-width: $breakpoint__m) {
+    flex-direction: column;
+  }
+}
+
+.contacts__content {
+  padding: 120px 180px 222px 80px;
+  min-height: 662px;
+  max-width: 845px;
+  width: 100%;
+  background-color: $color-blue;
+  position: relative;
+  z-index: 999;
+
+  &::after {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    background: url("./../assets/contacts/Shape.svg");
+    width: 224px;
+    height: 232px;
+    @media screen and (max-width: $breakpoint__m) {
+      right: -45px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    padding: 99px 142px 143px 148px;
+    min-height: 608px;
+  }
+}
+
+.contacts__title {
+  color: $color-white;
+}
+
+.contacts__suptitle {
+  margin-top: 8px;
+  margin-bottom: 82px;
+  color: $color-white;
+  opacity: 0.7;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.contacts__list {
+  li {
+    margin-left: 32px;
+    &:not(:last-child) {
+      margin-bottom: 44px;
+    }
+    a {
+      font-family: $font-secondary;
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-white;
+    }
+  }
+}
+
+.phone {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url(./../assets/contacts/phone.svg) 0 0 no-repeat;
+    position: absolute;
+    top: -1px;
+    left: -32px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.email {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url(./../assets/contacts/email.svg) 0 0 no-repeat;
+    position: absolute;
+    top: -2px;
+    left: -32px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.map {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url(./../assets/contacts/map.svg) 0 0 no-repeat;
+    position: absolute;
+    top: -3px;
+    left: -32px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.contacts__form {
+  padding: 103px 375px 103px 130px;
+  min-height: 662px;
+  max-width: 1075px;
+  width: 100%;
+  background-color: #efecfc;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 56px;
+    content: "";
+    background: url("./../assets/contacts/Shape-1.svg");
+    width: 72px;
+    height: 48px;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    padding: 100px 180px 100px 200px;
+    min-height: 600px;
+  }
+}
+
+.form__title {
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 800;
+}
+
+.input__row {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-bottom: 40px;
+}
+
+::placeholder {
+  color: $color-dark;
+}
+
+input {
+  padding-bottom: 8px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  outline: none;
+}
+
+.input__row {
+  label {
+    opacity: 0.7;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+  }
+}
+
+.input__group:focus-within label {
+  color: $color-blue;
+  transition: all 0.2s ease;
+}
+
+.input__group:focus-within input {
+  border-bottom: 1px solid $color-blue;
+  transition: all 0.2s ease;
+}
+
+.input__group:focus-within textarea {
+  border-bottom: 1px solid $color-blue;
+  transition: all 0.2s ease;
+}
+
+textarea {
+  padding-bottom: 8px;
+  padding-top: 8px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #e0e0e0;
+  outline: none;
+  width: 100%;
+}

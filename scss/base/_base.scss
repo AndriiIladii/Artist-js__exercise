@@ -1,0 +1,59 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:wght@400;700&display=swap");
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font-main;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: $color-white;
+  overflow-x: hidden;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    font-size: 15px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &--big {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.pink-text {
+  color: $color-pink;
+}
+
+.blue-text {
+  color: $color-blue;
+}
+
+.title-2 {
+  color: $color-dark;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 130%;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,135 @@
+.singers {
+  padding-bottom: 280px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: -75px;
+    top: 95px;
+    background-image: url("./../assets/singers/Pattern.svg");
+    background-repeat: no-repeat;
+    width: 301px;
+    height: 173px;
+    content: "";
+
+    @media screen and (max-width: $breakpoint__xxl) {
+      display: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    left: 140px;
+    bottom: 90px;
+    background-image: url("./../assets/singers/liner.svg");
+    background-repeat: no-repeat;
+    width: 107px;
+    height: 98px;
+    content: "";
+    animation: linerDrop 1s ease 0s 1 normal forwards;
+  }
+}
+
+.singers__wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+
+  @media screen and (max-width: $breakpoint__m) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.singers__content {
+  max-width: 470px;
+  padding-top: 176px;
+
+  @media screen and (max-width: $breakpoint__m) {
+    padding-top: 0;
+  }
+}
+
+.singers__text {
+  margin: 32px 0 110px;
+  opacity: 0.7;
+  -webkit-text-fill-color: gray;
+  -webkit-text-stroke-color: $color-dark;
+  -webkit-text-stroke-width: 1px;
+}
+
+.singers__gallery {
+  padding-top: 51px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media screen and (max-width: $breakpoint__l) {
+    gap: 15px;
+    padding-top: 150px;
+    justify-content: center;
+  }
+
+  &::after {
+    position: absolute;
+    right: 100px;
+    bottom: -10px;
+    background-image: url("./../assets/singers/triangle.svg");
+    background-repeat: no-repeat;
+    width: 144px;
+    height: 117px;
+    content: "";
+    animation: triangleSwirl 1s ease 0s 1 normal forwards;
+  }
+}
+
+.singers__gallery img {
+  transition: all 0.1s ease-in;
+  width: 40%;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: contrast(110%) brightness(1.2) saturate(1.2);
+  }
+}
+
+.singers__gallery img:nth-child(2) {
+  margin-top: -51px;
+  width: 270px;
+  height: 300px;
+  position: relative;
+  @media screen and (max-width: $breakpoint__l) {
+    width: 220px;
+    height: 230px;
+  }
+}
+
+.singers__gallery img:nth-child(3) {
+  margin-top: 14px;
+
+  @media screen and (max-width: $breakpoint__l) {
+    width: 220px;
+    height: 230px;
+  }
+  @media screen and (max-width: $breakpoint__l) {
+    width: 200px;
+    height: 220px;
+  }
+}
+
+.singers__gallery img:nth-child(4) {
+  width: 370px;
+  height: 270px;
+  @media screen and (max-width: $breakpoint__xl) {
+    width: 305px;
+    height: 230px;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    width: 260px;
+    height: 210px;
+  }
+}

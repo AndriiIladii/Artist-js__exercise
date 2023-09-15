@@ -1,0 +1,229 @@
+.event {
+  padding-top: 160px;
+  padding-bottom: 240px;
+  background: var(
+    --grad-blue,
+    linear-gradient(
+      180deg,
+      rgba(56, 29, 219, 0.05) 0%,
+      rgba(56, 29, 219, 0) 100%
+    )
+  );
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 108px;
+    top: 580px;
+    background-image: url("./../assets/event-table/Confetti.png");
+    background-repeat: no-repeat;
+    width: 95px;
+    height: 96px;
+    content: "";
+    animation: triangleSwirl 1s ease 0s 1 normal forwards;
+    @media screen and (max-width: $breakpoint__l),
+      screen and (max-width: $breakpoint__xl) {
+      display: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    right: 60px;
+    bottom: 650px;
+    background-image: url("./../assets/event-table/Confetti-1.png");
+    background-repeat: no-repeat;
+    width: 106px;
+    height: 107px;
+    content: "";
+    animation: swirlForward 1s ease 0s 1 normal forwards;
+    @media screen and (max-width: $breakpoint__l),
+      screen and (max-width: $breakpoint__xl) {
+      display: none;
+    }
+  }
+}
+
+.confetti {
+  position: absolute;
+  bottom: 565px;
+  right: 50px;
+  animation: swirl 1s ease 0s 1 normal forwards;
+
+  @media screen and (max-width: $breakpoint__l),
+    screen and (max-width: $breakpoint__xl) {
+    display: none;
+  }
+}
+
+.triangle-confetti {
+  position: absolute;
+  bottom: 120px;
+  right: 205px;
+  animation: triangleSwirl 1s ease 0s 1 normal forwards;
+}
+
+.event__tabs {
+  margin-top: 60px;
+  display: flex;
+  column-gap: 30px;
+  font-family: $font-secondary;
+}
+
+.tabs__content {
+  display: none;
+  margin-top: 40px;
+  max-width: 1170px;
+  overflow: hidden;
+  border: 1px solid $light-gray;
+  border-radius: 24px;
+  animation: movingContent 0.5s ease;
+}
+
+.tabs__content.active {
+  display: block;
+}
+
+.tabs__content--header {
+  padding: 41px 200px 41px 40px;
+  display: flex;
+  column-gap: 30px;
+  background-color: $event-gray;
+
+  p {
+    width: 230px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+
+    &:nth-child(2) {
+      width: 370px;
+    }
+  }
+}
+
+.tabs__content--item {
+  display: flex;
+  column-gap: 30px;
+  padding: 40px 40px 48px 40px;
+  border-bottom: 1px solid $light-gray;
+
+  p {
+    width: 204px;
+
+    &:nth-child(2) {
+      width: 370px;
+
+      @media screen and (max-width: $breakpoint__l) {
+        width: 340px;
+      }
+    }
+  }
+}
+
+.speaker {
+  width: 270px;
+
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  @media screen and (max-width: $breakpoint__l) {
+    width: 160px;
+  }
+
+  &--title {
+    font-weight: 700;
+  }
+
+  &--suptitle {
+    opacity: 0.5;
+  }
+}
+
+.text {
+  font-weight: 700;
+}
+
+.link {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+.link a {
+  font-family: $font-secondary;
+  color: $color-dark;
+  font-weight: 700;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -32px;
+    background-image: url("./../assets/event-table/Icons/Play.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.link--live a {
+  color: $color-red;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -32px;
+    background-image: url("./../assets/event-table/Icons/live.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.link--upcoming a {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -32px;
+    background-image: url("./../assets/event-table/Icons/Clock.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  margin-right: 35px;
+
+  &--right {
+    margin-right: 60px;
+
+    @media screen and (max-width: $breakpoint__m) {
+      margin-right: 27px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    margin-right: 46px;
+  }
+}
+
+.wrapper--right {
+  @media screen and (max-width: $breakpoint__m) {
+    margin-right: 77px;
+  }
+}
+
+.wrapper--last {
+  @media screen and (max-width: $breakpoint__m) {
+    margin-right: 25px;
+  }
+}

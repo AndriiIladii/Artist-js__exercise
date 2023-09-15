@@ -1,0 +1,112 @@
+.pricing {
+  text-align: center;
+  padding-bottom: 240px;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint__m) {
+    padding-bottom: 120px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 157px;
+    background-image: url(./../assets/category/Confetti.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 25px;
+    animation: swirl 4s ease 0s normal forwards;
+    @media screen and (max-width: $breakpoint__l) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 137px;
+    left: 248px;
+    background-image: url(./../assets/category/Confetti-1.png);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 26px;
+    animation: confetti 4s 0s normal forwards;
+
+    @media screen and (max-width: $breakpoint__l) {
+      display: none;
+    }
+  }
+}
+
+.pricing__items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.pricing__item {
+  padding: 26px 30px 30px 30px;
+  border-top: 4px solid $color-red;
+  width: 370px;
+  height: 404px;
+  border-radius: 20px;
+  background: $color-white;
+  box-shadow: 0px 20px 100px 0px rgba(34, 34, 34, 0.15);
+
+  @media screen and (max-width: $breakpoint__l) {
+    width: 315px;
+  }
+  @media screen and (max-width: $breakpoint__m) {
+    width: 225px;
+  }
+
+  &--basic {
+    border-top: 4px solid $color-dark;
+  }
+
+  &--standart {
+    border-top: 4px solid $color-blue;
+  }
+
+  &--premuim {
+    border-top: 4px solid $color-red;
+  }
+
+  &--title {
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 38px;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: $breakpoint__m) {
+      font-size: 22px;
+    }
+  }
+
+  &--price {
+    margin-bottom: 30px;
+    font-family: $font-secondary;
+    font-size: 60px;
+    font-weight: 700;
+    @media screen and (max-width: $breakpoint__m) {
+      font-size: 50px;
+    }
+  }
+
+  &--description {
+    margin-bottom: 30px;
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.standart {
+  color: $color-blue;
+}
+
+.premium {
+  color: $color-red;
+}

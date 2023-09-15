@@ -1,0 +1,125 @@
+.gallery {
+  position: relative;
+  padding-top: 160px;
+  padding-bottom: 240px;
+  background: var(
+    --grad-red,
+    linear-gradient(
+      180deg,
+      rgba(252, 82, 82, 0.05) 0%,
+      rgba(252, 82, 82, 0) 100%
+    )
+  );
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 493px;
+    content: "";
+    background-image: url("./../assets/gallery/Instagram.png");
+    background-repeat: no-repeat;
+    width: 431px;
+    height: 431px;
+  }
+}
+
+.swiper-wrapper {
+  margin-top: 61px;
+}
+
+.swiper-container__gallery {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  img {
+    width: 370px;
+    height: 370px;
+    object-fit: cover;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: $color-white;
+  top: 44% !important;
+  width: 56px !important;
+  height: 56px !important;
+  padding: 11.2px;
+  border-radius: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next:after {
+  display: none;
+}
+
+.swiper-button-prev {
+  background-image: url(./../assets/gallery/prev.svg);
+  left: 125px !important;
+}
+
+.swiper-button-next {
+  background-image: url(./../assets/gallery/next.svg);
+  right: 125px !important;
+}
+
+.slider__item {
+  width: 370px;
+  height: 370px;
+  opacity: 0.7;
+  &--content {
+    font-family: $font-secondary;
+    display: flex;
+    font-weight: 700;
+    margin-top: 26px;
+    margin-left: 32px;
+    column-gap: 72px;
+  }
+
+  &--suptitle {
+    font-weight: 400;
+    margin: 8px 0;
+  }
+
+  &--hashtags {
+    opacity: 0.5;
+  }
+}
+
+.swiper-slide-active,
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 1;
+}
+
+.like {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: -2px;
+    left: -32px;
+    content: "";
+    background-image: url("./../assets/gallery/Heart.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.comment {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: -2px;
+    left: -32px;
+    content: "";
+    background-image: url("./../assets/gallery/Chat.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+}

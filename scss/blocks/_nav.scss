@@ -1,0 +1,39 @@
+.nav {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  column-gap: 56px;
+
+  a {
+    color: $color-white;
+    transition: color 1s ease;
+  }
+
+  a:hover {
+    color: $color-red;
+  }
+
+  li:nth-child(2),
+  li:nth-child(3) {
+    position: relative;
+  }
+}
+
+.nav__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+
+  @media screen and (max-width: $breakpoint__m) {
+    display: none;
+  }
+}
+
+.arrow-down {
+  margin-left: 8px;
+}

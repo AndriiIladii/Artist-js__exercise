@@ -1,0 +1,36 @@
+.header__timer {
+  max-width: 1477px;
+  margin: 0 auto;
+}
+
+.timer__wrapper {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timer__item {
+  display: flex;
+  font-size: 144px;
+  line-height: 176px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: $color-white;
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0.5;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    font-size: 125px;
+    line-height: 156.5px;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    font-size: 110px;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    font-size: 80px;
+  }
+}
