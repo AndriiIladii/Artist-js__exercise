@@ -3,6 +3,7 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -55,5 +56,9 @@ h6 {
 
   @media screen and (max-width: $breakpoint__xl) {
     font-size: 28px;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    font-size: 25px;
   }
 }

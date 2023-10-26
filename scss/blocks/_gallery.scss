@@ -11,6 +11,11 @@
     )
   );
 
+  @media screen and (max-width: $breakpoint__s) {
+    padding-top: 75px;
+    padding-bottom: 130px;
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -58,11 +63,19 @@
 .swiper-button-prev {
   background-image: url(./../assets/gallery/prev.svg);
   left: 125px !important;
+
+  @media screen and (max-width: $breakpoint__s) {
+    left: 35px !important;
+  }
 }
 
 .swiper-button-next {
   background-image: url(./../assets/gallery/next.svg);
   right: 125px !important;
+
+  @media screen and (max-width: $breakpoint__s) {
+    right: 35px !important;
+  }
 }
 
 .slider__item {

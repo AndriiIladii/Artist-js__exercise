@@ -29,6 +29,14 @@
     height: 98px;
     content: "";
     animation: linerDrop 1s ease 0s 1 normal forwards;
+
+    @media screen and (max-width: $breakpoint__s) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    padding-bottom: 140px;
   }
 }
 
@@ -59,6 +67,10 @@
   -webkit-text-fill-color: gray;
   -webkit-text-stroke-color: $color-dark;
   -webkit-text-stroke-width: 1px;
+
+  @media screen and (max-width: $breakpoint__s) {
+    margin-bottom: 85px;
+  }
 }
 
 .singers__gallery {
@@ -71,6 +83,12 @@
     gap: 15px;
     padding-top: 150px;
     justify-content: center;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    align-items: center;
+    flex-direction: column;
+    padding-top: 85px;
   }
 
   &::after {
@@ -94,6 +112,10 @@
     transform: scale(1.1);
     filter: contrast(110%) brightness(1.2) saturate(1.2);
   }
+
+  @media screen and (max-width: $breakpoint__s) {
+    width: 70%;
+  }
 }
 
 .singers__gallery img:nth-child(2) {
@@ -104,6 +126,10 @@
   @media screen and (max-width: $breakpoint__l) {
     width: 220px;
     height: 230px;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    margin-top: 0;
   }
 }
 

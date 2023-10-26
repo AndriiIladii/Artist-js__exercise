@@ -43,6 +43,12 @@ let swiper = new Swiper(slider, {
       slidesPerView: 1.5,
       spaceBetween: 40,
     },
+    425: {
+      slidesPerView: 1,
+    },
+    375: {
+      slidesPerView: 1,
+    },
   },
 });
 
@@ -69,6 +75,14 @@ let swiperGal = new Swiper(sliderGallery, {
       slidesPerView: 2.5,
       spaceBetween: 20,
     },
+    425: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    375: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
   },
 });
 
@@ -79,7 +93,7 @@ const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 
 // Устанавливаем дату и время, до которого хотим посчитать разницу
-let countDownDate = new Date("Oct 8, 2023 11:04:08").getTime();
+let countDownDate = new Date("Jan 9, 2024 11:04:08").getTime();
 
 let updateTimer = setInterval(function () {
   // Получаем текущее дату и время
@@ -101,10 +115,29 @@ let updateTimer = setInterval(function () {
   minutes.innerHTML = minutesDif;
   seconds.innerHTML = secondsDif;
 
-  // Когда таймер дойдет до заданной даты и времени
-  if (difference < 0) {
-    clearInterval(updateTimer);
-    timer.innerHTML = "Наступило";
-  }
   // Обновляем функцию с интервалом 1 секунда
 }, 1000);
+
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger = document.querySelector(".hamburger");
+const closeIcon = document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach(function (menuItem) {
+  menuItem.addEventListener("click", toggleMenu);
+});

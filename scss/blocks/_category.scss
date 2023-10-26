@@ -4,6 +4,10 @@
   @media screen and (max-width: $breakpoint__m) {
     padding: 100px 0 180px;
   }
+
+  @media screen and (max-width: $breakpoint__s) {
+    padding: 50px 0 50px;
+  }
 }
 
 .category__items {
@@ -11,6 +15,11 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media screen and (max-width: $breakpoint__s) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .category__item {
@@ -37,6 +46,15 @@
     padding: 10px 62px 22px 19px;
     width: 150px;
     height: 214px;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    margin-bottom: 15px;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    padding: 15px 62px 25px 28px;
+    width: 275px;
   }
 }
 
@@ -68,6 +86,10 @@
     @media screen and (max-width: $breakpoint__l) {
       top: -120px;
       left: 350px;
+
+      @media screen and (max-width: $breakpoint__s) {
+        display: none;
+      }
     }
   }
 
@@ -82,6 +104,9 @@
     animation: swirlForward 3s ease 0s normal forwards;
     @media screen and (max-width: $breakpoint__l) {
       bottom: -120px;
+    }
+    @media screen and (max-width: $breakpoint__s) {
+      display: none;
     }
   }
 }
@@ -151,6 +176,12 @@
   @media screen and (max-width: $breakpoint__l) {
     font-size: 15px;
   }
+
+  @media screen and (max-width: $breakpoint__s) {
+    font-size: 20px;
+    margin-top: 14px;
+    margin-bottom: 16px;
+  }
 }
 
 .category__text {
@@ -165,5 +196,10 @@
 
   @media screen and (max-width: $breakpoint__l) {
     width: 96px;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    width: 175px;
+    font-size: 14px;
   }
 }

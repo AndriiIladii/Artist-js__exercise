@@ -11,6 +11,10 @@
   );
   position: relative;
 
+  @media screen and (max-width: $breakpoint__s) {
+    padding-top: 80px;
+  }
+
   &::before {
     position: absolute;
     left: 108px;
@@ -90,11 +94,20 @@
   column-gap: 30px;
   background-color: $event-gray;
 
+  @media screen and (max-width: $breakpoint__s) {
+    padding: 25px 100px 25px 12px;
+    column-gap: 0;
+  }
+
   p {
     width: 230px;
     font-size: 24px;
     font-weight: 700;
     line-height: 38px;
+
+    @media screen and (max-width: $breakpoint__s) {
+      font-size: 20px;
+    }
 
     &:nth-child(2) {
       width: 370px;
@@ -108,6 +121,11 @@
   padding: 40px 40px 48px 40px;
   border-bottom: 1px solid $light-gray;
 
+  @media screen and (max-width: $breakpoint__s) {
+    column-gap: 40px;
+    padding: 40px 40px 48px 13px;
+  }
+
   p {
     width: 204px;
 
@@ -117,6 +135,13 @@
       @media screen and (max-width: $breakpoint__l) {
         width: 340px;
       }
+
+      @media screen and (max-width: $breakpoint__s) {
+        width: 25%;
+      }
+    }
+    @media screen and (max-width: $breakpoint__s) {
+      width: 25%;
     }
   }
 }
@@ -131,6 +156,9 @@
   @media screen and (max-width: $breakpoint__l) {
     width: 160px;
   }
+  @media screen and (max-width: $breakpoint__s) {
+    width: 25%;
+  }
 
   &--title {
     font-weight: 700;
@@ -141,8 +169,18 @@
   }
 }
 
+.speaker img {
+  @media screen and (max-width: $breakpoint__s) {
+    max-width: 80px;
+  }
+}
+
 .text {
   font-weight: 700;
+
+  @media screen and (max-width: $breakpoint__s) {
+    font-size: 12px;
+  }
 }
 
 .link {
@@ -157,6 +195,10 @@
   font-weight: 700;
   position: relative;
 
+  @media screen and (max-width: $breakpoint__s) {
+    color: transparent;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -166,11 +208,19 @@
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
+
+    @media screen and (max-width: $breakpoint__s) {
+      right: 80px;
+    }
   }
 }
 
 .link--live a {
   color: $color-red;
+
+  @media screen and (max-width: $breakpoint__s) {
+    color: transparent;
+  }
 
   &::after {
     content: "";
@@ -181,6 +231,10 @@
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
+
+    @media screen and (max-width: $breakpoint__s) {
+      right: 80px;
+    }
   }
 }
 
@@ -194,6 +248,10 @@
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
+
+    @media screen and (max-width: $breakpoint__s) {
+      right: 80px;
+    }
   }
 }
 

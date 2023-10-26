@@ -33,4 +33,8 @@
   @media screen and (max-width: $breakpoint__m) {
     font-size: 80px;
   }
+
+  @media screen and (max-width: $breakpoint__s) {
+    font-size: 40px;
+  }
 }

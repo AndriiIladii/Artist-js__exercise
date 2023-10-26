@@ -6,6 +6,10 @@
 .testimonials {
   text-align: center;
   padding-bottom: 340px;
+
+  @media screen and (max-width: $breakpoint__s) {
+    padding-bottom: 200px;
+  }
 }
 
 .card {

@@ -6,6 +6,10 @@
     padding-bottom: 180px;
   }
 
+  @media screen and (max-width: $breakpoint__s) {
+    padding-bottom: 120px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -38,11 +42,19 @@
 .about__images {
   padding-top: 70px;
   margin-left: 70px;
+
+  @media screen and (max-width: $breakpoint__s) {
+    margin-left: 26px;
+  }
 }
 
 .about__content {
   padding-top: 107px;
   max-width: 570px;
+
+  @media screen and (max-width: $breakpoint__s) {
+    padding-top: 70px;
+  }
 }
 
 .about__text {
@@ -52,6 +64,10 @@
 
   @media screen and (max-width: $breakpoint__m) {
     margin-bottom: 55px;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    margin-bottom: 35px;
   }
 }
 

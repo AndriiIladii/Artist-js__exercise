@@ -95,6 +95,10 @@
     background-position: 0;
     color: $color-red;
   }
+
+  @media screen and (max-width: $breakpoint__s) {
+    margin-right: 75px;
+  }
 }
 
 .video__btn {
@@ -104,6 +108,10 @@
   font-weight: 800;
   position: relative;
 
+  @media screen and (max-width: $breakpoint__s) {
+    font-size: 16px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -112,6 +120,11 @@
     height: 56px;
     top: -15px;
     left: -76px;
+
+    @media screen and (max-width: $breakpoint__s) {
+      left: -60px;
+      top: -19px;
+    }
   }
 
   &:hover::before {
@@ -130,11 +143,19 @@
   width: 370px;
   transition: all 0.2s ease-in;
 
+  @media screen and (max-width: $breakpoint__s) {
+    font-size: 20px;
+  }
+
   &--suptitle {
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
     margin-bottom: 20px;
+
+    @media screen and (max-width: $breakpoint__s) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -142,4 +163,12 @@
   color: $color-blue;
   border-bottom: 4px solid $color-blue;
   opacity: 1;
+
+  @media screen and (max-width: $breakpoint__s) {
+    border-bottom: 3px solid $color-blue;
+  }
+}
+
+.hamburger_btn {
+  margin-left: 0;
 }

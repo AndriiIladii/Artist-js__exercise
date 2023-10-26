@@ -5,6 +5,10 @@
 
 .footer__logo {
   margin-bottom: 55px;
+
+  @media screen and (max-width: $breakpoint__s) {
+    text-align: center;
+  }
 }
 
 .footer__content {
@@ -28,6 +32,10 @@
   @media screen and (max-width: $breakpoint__m) {
     font-size: 12px;
     column-gap: 12px;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    display: none;
   }
 }
 
