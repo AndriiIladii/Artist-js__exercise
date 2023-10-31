@@ -13,7 +13,7 @@
   width: 100%;
   background-color: $color-blue;
   position: relative;
-  z-index: 999;
+  z-index: 99;
 
   &::after {
     z-index: -1;

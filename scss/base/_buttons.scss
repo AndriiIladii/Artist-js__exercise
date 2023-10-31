@@ -9,6 +9,11 @@
   @media screen and (max-width: $breakpoint__m) {
     font-size: 14px;
   }
+
+  @media screen and (max-width: $breakpoint__xxs) {
+    font-size: 13px;
+    padding: 14px 17px;
+  }
 }
 
 .btn__white {
@@ -112,6 +117,10 @@
     font-size: 16px;
   }
 
+  @media screen and (max-width: $breakpoint__xxs) {
+    font-size: 13px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -169,6 +178,6 @@
   }
 }
 
-.hamburger_btn {
+.burger-btn {
   margin-left: 0;
 }

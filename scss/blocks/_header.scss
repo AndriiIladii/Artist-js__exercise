@@ -54,6 +54,10 @@
   @media screen and (max-width: $breakpoint__s) {
     font-size: 40px;
   }
+
+  @media screen and (max-width: $breakpoint__xxs) {
+    font-size: 35px;
+  }
 }
 
 .header__text {
@@ -77,5 +81,8 @@
 
   @media screen and (max-width: $breakpoint__s) {
     font-size: 15px;
+  }
+  @media screen and (max-width: $breakpoint__xxs) {
+    font-size: 12px;
   }
 }

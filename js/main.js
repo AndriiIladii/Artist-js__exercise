@@ -49,6 +49,9 @@ let swiper = new Swiper(slider, {
     375: {
       slidesPerView: 1,
     },
+    320: {
+      slidesPerView: 1,
+    },
   },
 });
 
@@ -80,6 +83,10 @@ let swiperGal = new Swiper(sliderGallery, {
       spaceBetween: 20,
     },
     375: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    320: {
       slidesPerView: 1.5,
       spaceBetween: 20,
     },
@@ -118,26 +125,17 @@ let updateTimer = setInterval(function () {
   // Обновляем функцию с интервалом 1 секунда
 }, 1000);
 
-const menu = document.querySelector(".menu");
-const menuItems = document.querySelectorAll(".menuItem");
 const hamburger = document.querySelector(".hamburger");
-const closeIcon = document.querySelector(".closeIcon");
-const menuIcon = document.querySelector(".menuIcon");
+const navMenu = document.querySelector(".burger__menu");
 
-function toggleMenu() {
-  if (menu.classList.contains("showMenu")) {
-    menu.classList.remove("showMenu");
-    closeIcon.style.display = "none";
-    menuIcon.style.display = "block";
-  } else {
-    menu.classList.add("showMenu");
-    closeIcon.style.display = "block";
-    menuIcon.style.display = "none";
-  }
-}
-
-hamburger.addEventListener("click", toggleMenu);
-
-menuItems.forEach(function (menuItem) {
-  menuItem.addEventListener("click", toggleMenu);
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
 });
+
+document.querySelectorAll(".burger__menu--link").forEach((n) =>
+  n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  })
+);

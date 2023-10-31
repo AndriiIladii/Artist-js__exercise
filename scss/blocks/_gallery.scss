@@ -67,6 +67,10 @@
   @media screen and (max-width: $breakpoint__s) {
     left: 35px !important;
   }
+
+  @media screen and (max-width: $breakpoint__xxs) {
+    left: 25px !important;
+  }
 }
 
 .swiper-button-next {
@@ -75,6 +79,10 @@
 
   @media screen and (max-width: $breakpoint__s) {
     right: 35px !important;
+  }
+
+  @media screen and (max-width: $breakpoint__xxs) {
+    right: 25px !important;
   }
 }
 

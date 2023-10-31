@@ -74,6 +74,10 @@
   font-family: $font-secondary;
 }
 
+.tabs__content--body {
+  font-size: 12px;
+}
+
 .tabs__content {
   display: none;
   margin-top: 40px;
@@ -96,7 +100,15 @@
 
   @media screen and (max-width: $breakpoint__s) {
     padding: 25px 100px 25px 12px;
-    column-gap: 0;
+    column-gap: 55px;
+  }
+
+  @media screen and (max-width: $breakpoint__xs) {
+    column-gap: 25px;
+  }
+
+  @media screen and (max-width: $breakpoint__xxs) {
+    column-gap: 15px;
   }
 
   p {
@@ -122,8 +134,12 @@
   border-bottom: 1px solid $light-gray;
 
   @media screen and (max-width: $breakpoint__s) {
-    column-gap: 40px;
+    column-gap: 70px;
     padding: 40px 40px 48px 13px;
+  }
+
+  @media screen and (max-width: $breakpoint__xxs) {
+    column-gap: 30px;
   }
 
   p {
@@ -187,6 +203,18 @@
   text-align: right;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: $breakpoint__s) {
+    display: none;
+  }
+
+  @media screen and (max-width: $breakpoint__xs) {
+    display: none;
+  }
+
+  @media screen and (max-width: $breakpoint__xxs) {
+    display: none;
+  }
 }
 
 .link a {
