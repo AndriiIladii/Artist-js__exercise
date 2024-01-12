@@ -99,16 +99,13 @@ const hours = document.querySelector(".hours");
 const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 
-// Устанавливаем дату и время, до которого хотим посчитать разницу
-let countDownDate = new Date("Jan 9, 2024 11:04:08").getTime();
+let countDownDate = new Date("Dec 31, 2024 11:04:08").getTime();
 
 let updateTimer = setInterval(function () {
-  // Получаем текущее дату и время
   let now = new Date().getTime();
-  // Находим разницу между текущим временем и заданным
+
   let difference = countDownDate - now;
 
-  // Рассчитываем дни, часы, минуты и секунды
   let daysDif = Math.floor(difference / (1000 * 60 * 60 * 24));
   let hoursDif = Math.floor(
     (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -116,13 +113,10 @@ let updateTimer = setInterval(function () {
   let minutesDif = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
   let secondsDif = Math.floor((difference % (1000 * 60)) / 1000);
 
-  // Вставляем значения в таймер
   days.innerHTML = daysDif;
   hours.innerHTML = hoursDif;
   minutes.innerHTML = minutesDif;
   seconds.innerHTML = secondsDif;
-
-  // Обновляем функцию с интервалом 1 секунда
 }, 1000);
 
 const hamburger = document.querySelector(".hamburger");
@@ -133,8 +127,8 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-document.querySelectorAll(".burger__menu--link").forEach((n) =>
-  n.addEventListener("click", () => {
+document.querySelectorAll(".burger__menu--link").forEach((e) =>
+  e.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
   })
